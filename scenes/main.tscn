@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmegno4vvqwjw"]
+
+[ext_resource type="Shape2D" uid="uid://bkpspcab7w5kt" path="res://2D_Shapes/new_capsule_shape_2d.tres" id="1_bag41"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qfd13"]
+
+[node name="Main2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 326)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.76, 16.16)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(250, 244)
+
+[node name="Capsule" type="CollisionShape2D" parent="RigidBody2D"]
+rotation = 0.0013504
+shape = ExtResource("1_bag41")
+debug_color = Color(0, 0.647059, 0.25098, 0.419608)
+
+[node name="RigidBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(580, 320)
+
+[node name="Floor" type="CollisionShape2D" parent="RigidBody2D2"]
+position = Vector2(-5, 330)
+scale = Vector2(57.4461, 2.80098)
+shape = SubResource("RectangleShape2D_qfd13")
